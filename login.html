@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png">
+    <title>Blume | Server</title>
+    
+
+</head>
+<body>
+     <img class="logo" src="https://wiki.olympusrpg.org/images/0/01/Logo_00016.png" alt="logo"
+     width="150" height="">
+         <div class="container">
+            
+            <div class="card">
+                <h1 class="title">Entre com sua conta</h1> 
+                
+                <form action="">
+                <div id="msgError"></div>
+
+                <img class="user"src="https://raw.githubusercontent.com/app-htn/appvendas/refs/heads/main/logo/profile.png"
+          alt="profile" width="99" height="99">
+         
+               
+                <div class="label-float">
+                    <input type="text" id="usuario" placeholder="Usuário">
+                    
+                    
+            </div>
+
+                <div class="label-pass">
+                    <input type="password" id="senha" placeholder="Senha" >
+                    <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+                </div>
+                
+                <div class="justify-center">
+                    
+                    <button input type="submit" onclick="logar(); return false">Entrar</button>
+                    
+                </div>
+             
+
+            </div>
+         </div>
+        </form>
+
+        
+        <script src="script.js"></script>
+
+
+        </body>
+</html>
