@@ -1,6 +1,6 @@
 
 
-var baseurl = 'http://ua-appweb02:8090/DataSnap/Rest/TServerMethods1/Colaboradores/';
+var baseurl = 'http://ua-appweb02:8090/DataSnap/Rest/TServerMethods1/Colaboradores/0/';
 
 function loadColab(){
     var xmlhttp = new XMLHttpRequest();
