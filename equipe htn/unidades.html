@@ -1,0 +1,1752 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	<!--Import style.css -->
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Equipe HTN - Unidades</title>
+</head>
+<body>
+	<div class="fixed-action-btn">
+		<a id="topBtn" class="btn-floating btn-large lime accent-4 scale-transition scale-out z-depth-2 tooltipped" data-position="left" data-tooltip="Voltar ao Topo">
+			<i class="large material-icons black-text">keyboard_arrow_up</i>
+		</a>
+	</div>
+	<div class="navbar-fixed z-depth-2">
+		<nav>
+			<div class="nav-wrapper black">
+				<img class="brand-logo center" src="./files/LogoWhite.png" style="height: 55px;">
+				<a id="backBtn" class="btn-floating btn-large halfway-fab lime accent-4 left z-depth-2 tooltipped" data-position="bottom" data-tooltip="Pagina Anterior"><i class="material-icons black-text left">keyboard_arrow_left</i></a>
+			</div>
+		</nav>
+	</div>
+	<div class="parallax-container" style="height: 400px;">
+		<h2 class="header grey-text text-lighten-3 center" style="font-weight: bolder; padding: 150px; text-shadow: 3px 3px 10px black;">Unidades</h2>
+		<div class="parallax"><img src="./files/fundo.jpg" class="responsive-img"></div>
+	</div>
+	<div class="section white">
+		<div class="row">
+			<div id="myBtnContainer" class="col l12 m12 s12 center hide-on-med-and-down">
+				<div class="row">
+					<button id="btnall" class="btn active lime accent-4 black-text" style="font-weight: bolder;" onclick="filterSelection('all')">Mostrar todas</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('americana')"> Americana</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('araraquara')"> Araraquara</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('atibaia')"> Atibaia</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('bauru')"> Bauru</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('botucatu')"> Botucatu</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('braga')"> Bragança Paulista</button>
+				</div>
+				<div class="row">
+					
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('campinas')"> Campinas</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('duque')"> Duque de Caxias</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('indaiatuba')"> Indaiatuba</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('itu')"> Itu</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('jacarei')"> Jacareí</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('juiz')"> Juiz de Fora</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('jundiai')"> Jundiai</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('londrina')"> Londrina</button>
+				</div>
+				<div class="row">
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('marilia')"> Marilia</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('mogi')"> Mogi das Cruzes</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('iguacu')"> Nova Iguaçu</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('piracicaba')"> Piracicaba</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('poços')"> Poços de Caldas</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('pouso')"> Pouso Alegre</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('ribeirao')"> Ribeirão Preto</button>
+				</div>
+				<div class="row">
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('rioclaro')"> Rio Claro</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('riopreto')"> São José do Rio Preto</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('campos')"> São José dos Campos</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('sertaozinho')"> Sertãozinho</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('sorocaba')"> Sorocaba</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('suzano')"> Suzano</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('taubate')"> Taubate</button>
+					<button class="btn black" style="font-weight: bolder;" onclick="filterSelection('varginha')"> Varginha</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="divider"></div>
+		</div>
+		<div class="row container">
+			<div class="filterDiv jundiai">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 03</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 03</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a id="3" class="btn-floating btn-large right black z-depth-2"  href="./unidadeview.html" onclick="filial('3')"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv ribeirao">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 04</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 04</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a id="4" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv braga">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 05</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 05</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a id="5" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv braga">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 06</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 06</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a id="6" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv americana">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 07</span>
+										<span class="card-title truncate">Americana</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 07</span>
+										<span class="card-title truncate">Americana</span>
+										<a id="7" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv atibaia">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 08</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 08</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a id="8" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv piracicaba">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 09</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 09</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a id="9" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv ribeirao">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 11</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 11</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a id="11" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv piracicaba">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 12</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 12</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a id="12" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv braga">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 13</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 13</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a id="13" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv campinas">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 14</span>
+										<span class="card-title truncate">Campinas</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 14</span>
+										<span class="card-title truncate">Campinas</span>
+										<a id="14" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv jundiai">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 15</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 15</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a id="15" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv atibaia">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 17</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 17</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a id="17" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv riopreto">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 21</span>
+										<span class="card-title truncate">São José do Rio Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 21</span>
+										<span class="card-title truncate">São José do Rio Preto</span>
+										<a id="21" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv marilia">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 22</span>
+										<span class="card-title truncate">Marilia</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 22</span>
+										<span class="card-title truncate">Marilia</span>
+										<a id="22" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv londrina">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 23</span>
+										<span class="card-title truncate">Londrina</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 23</span>
+										<span class="card-title truncate">Londrina</span>
+										<a id="23" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv juiz">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 24</span>
+										<span class="card-title truncate">Juiz de Fora</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 24</span>
+										<span class="card-title truncate">Juiz de Fora</span>
+										<a id="24" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv poços">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 25</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 25</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a id="25" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv riopreto">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 26</span>
+										<span class="card-title truncate">São José do Rio Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 26</span>
+										<span class="card-title truncate">São José do Rio Preto</span>
+										<a id="26" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv campinas">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 27</span>
+										<span class="card-title truncate">Campinas</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 27</span>
+										<span class="card-title truncate">Campinas</span>
+										<a id="27" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv duque">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 28</span>
+										<span class="card-title truncate">Duque de Caxias</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 28</span>
+										<span class="card-title truncate">Duque de Caxias</span>
+										<a id="28" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv iguacu">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 29</span>
+										<span class="card-title truncate">Nova Iguaçu</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 29</span>
+										<span class="card-title truncate">Nova Iguaçu</span>
+										<a id="29" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv braga">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 30</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 30</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a id="30" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv ribeirao">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 31</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 31</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a id="31" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv juiz">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 32</span>
+										<span class="card-title truncate">Juiz de Fora</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 32</span>
+										<span class="card-title truncate">Juiz de Fora</span>
+										<a id="32" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv braga">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 33</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 33</span>
+										<span class="card-title truncate">Bragança Paulista</span>
+										<a id="33" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv ribeirao">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 34</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 34</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a id="34" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv suzano">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 35</span>
+										<span class="card-title truncate">Suzano</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 35</span>
+										<span class="card-title truncate">Suzano</span>
+										<a id="35" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv poços">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 36</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 36</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a id="36" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv mogi">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 38</span>
+										<span class="card-title truncate">Mogi das Cruzes</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 38</span>
+										<span class="card-title truncate">Mogi das Cruzes</span>
+										<a id="38" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv atibaia">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 39</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 39</span>
+										<span class="card-title truncate">Atibaia</span>
+										<a id="39" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv pouso">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 40</span>
+										<span class="card-title truncate">Pouso Alegre</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 40</span>
+										<span class="card-title truncate">Pouso Alegre</span>
+										<a id="40" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv duque">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 41</span>
+										<span class="card-title truncate">Duque de Caxias</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 41</span>
+										<span class="card-title truncate">Duque de Caxias</span>
+										<a id="41" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv sertaozinho">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 42</span>
+										<span class="card-title truncate">Sertãozinho</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 42</span>
+										<span class="card-title truncate">Sertãozinho</span>
+										<a id="42" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv poços">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 43</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 43</span>
+										<span class="card-title truncate">Poços de Caldas</span>
+										<a id="43" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv varginha">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 44</span>
+										<span class="card-title truncate">Varginha</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 44</span>
+										<span class="card-title truncate">Varginha</span>
+										<a id="44" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv londrina">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 45</span>
+										<span class="card-title truncate">Londrina</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 45</span>
+										<span class="card-title truncate">Londrina</span>
+										<a id="45" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv piracicaba">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 46</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 46</span>
+										<span class="card-title truncate">Piracicaba</span>
+										<a id="46" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv araraquara">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 47</span>
+										<span class="card-title truncate">Araraquara</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 47</span>
+										<span class="card-title truncate">Araraquara</span>
+										<a id="47" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv itu">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 48</span>
+										<span class="card-title truncate">Itu</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 48</span>
+										<span class="card-title truncate">Itu</span>
+										<a id="48" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv botucatu">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 49</span>
+										<span class="card-title truncate">Botucatu</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 49</span>
+										<span class="card-title truncate">Botucatu</span>
+										<a id="49" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv jacarei">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 50</span>
+										<span class="card-title truncate">Jacareí</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 50</span>
+										<span class="card-title truncate">Jacareí</span>
+										<a id="50" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv rioclaro">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 51</span>
+										<span class="card-title truncate">Rio Claro</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 51</span>
+										<span class="card-title truncate">Rio Claro</span>
+										<a id="51" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv jundiai">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 52</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 52</span>
+										<span class="card-title truncate">Jundiai</span>
+										<a id="52" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv campos">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 53</span>
+										<span class="card-title truncate">São José dos Campos</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 53</span>
+										<span class="card-title truncate">São José dos Campos</span>
+										<a id="53" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv campos">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 54</span>
+										<span class="card-title truncate">São José dos Campos</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 54</span>
+										<span class="card-title truncate">São José dos Campos</span>
+										<a id="54" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv sorocaba">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 55</span>
+										<span class="card-title truncate">Sorocaba</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 55</span>
+										<span class="card-title truncate">Sorocaba</span>
+										<a id="55" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv ribeirao">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 56</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 56</span>
+										<span class="card-title truncate">Ribeirão Preto</span>
+										<a id="56" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv bauru">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 57</span>
+										<span class="card-title truncate">Bauru</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 57</span>
+										<span class="card-title truncate">Bauru</span>
+										<a id="57" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv taubate">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 58</span>
+										<span class="card-title truncate">Taubate</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 58</span>
+										<span class="card-title truncate">Taubate</span>
+										<a id="58" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filterDiv indaiatuba">
+				<div class="col l4 m6 s12">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<div class="card z-depth-2">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 59</span>
+										<span class="card-title truncate">Indaiatuba</span>
+										<a class="btn-floating btn-large right lime accent-4 z-depth-2"><i class="material-icons black-text">info_outline</i></a>
+									</div>
+									<div class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<div class="card lime accent-4 z-depth-4">
+									<div class="card-content">
+										<span class="card-title truncate" style="font-weight: bolder;">Unidade 59</span>
+										<span class="card-title truncate">Indaiatuba</span>
+										<a id="59" class="btn-floating btn-large right black z-depth-2" href="./unidadeview.html" onclick="filial(this.id)"><i class="material-icons">info_outline</i></a>
+									</div>
+									<div id="card" class="card-action">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="parallax-container" style="height: 400px;">
+		<div class="parallax"><img src="./files/fundo.jpg" class="responsive-img"></div>
+	</div>
+	<footer class="page-footer color: black">
+		<div class="container black">
+			<div class="row">
+				<div class="col l8 s6">
+					<img class="brand-logo center hide-on-med-and-down" src="./files/TextWhite.png" style="height: 75px; padding-top: 13px;">
+				</div>
+			</div>
+			<p></p>
+		</div>
+		<div class="footer-copyright black">
+			<div class="container">
+				<div class="row">
+				<div class="col s11 pull-s1">© 1980 Humanitarian Calçados</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--JavaScript at end of body for optimized loading-->
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- Materialize -->
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<!-- Scroll to Top -->
+	<script type="text/javascript" src="js/scrolltop.min.js"></script>
+	<!-- Pulse Effect -->
+	<script type="text/javascript" src="js/pulseeffect.min.js"></script>
+	<!-- Materialize Components Initialize -->
+	<script type="text/javascript" src="js/init.min.js"></script>
+	<!-- Filter Buttons -->
+	<script type="text/javascript" src="js/filterbuttons.min.js"></script>
+	<!-- WebService -->
+	<script type="text/javascript" src="js/varstorage.js"></script>
+	</body>
+</html>
