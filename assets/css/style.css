@@ -8,25 +8,25 @@
 }
 body{
   height: 100vh;
-  background: black;
-  
+  background: url(https://wiki.omv-extras.org/lib/exe/fetch.php?cache=&media=omv6ug_-top.jpg);
+  background-size: cover;
 }
 
 nav,manu-lateral{
   width: 80px;
   height: 100%;
   background-color: black;
+  backdrop-filter: blur(20px);
   padding: 40px 0 40px 1%;
   box-shadow: 5px 0 0 #3396d7;
-
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: .2s;
+  transition: .5s;
 }
 
-nav.menu-lateral:hover{
+nav.menu-lateral.expandir{
     width: 300px;
 }
 
@@ -48,6 +48,10 @@ ul li.item-menu{
     transition: .4s;
 }
 
+ul li.ativo{
+  background-color: #3396d7;
+}
+
 ul li.item-menu:hover{
     background: #3396d7;
 }
@@ -61,9 +65,16 @@ ul li.item-menu a{
   margin-bottom: 20px;
   line-height: 30px;
 }
+
 ul li.item-menu a .txt-link{
+  margin-left: 70px;
+  transition: .5s;
+}
+
+nav.menu-lateral.expandir .txt-link{
   margin-left: 40px;
 }
+
 ul li.item-menu a .icon > i{
   font-size: 30px;
   margin-left: 10px;
