@@ -6,11 +6,6 @@
   box-sizing: border-box;
   font-family: 'Outfit',Sans-Serif;
 }
-body{
-  height: 100vh;
-  background: url(https://wiki.omv-extras.org/lib/exe/fetch.php?cache=&media=omv6ug_-top.jpg);
-  background-size: cover;
-}
 
 nav,manu-lateral{
   width: 80px;

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/56c2ba4a61.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Arquivos</title>
+</head>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: lack;
+          backdrop-filter: blu(5px);
+          height: 100%;
+        }
+    
+        h1 {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          white-space: nowrap;
+          display: flex;
+          justify-content: center;
+          color: aliceblue;
+          font-size: 40px;
+          color: #3396d7;
+          background-color: transparent;
+          margin-left: 250px;
+          margin-right: 250px;
+          border-radius: 30px;
+          backdrop-filter: blur(5px);
+          border: 1px solid;
+          padding: 10px;
+        }
+
+        h2 {
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+          white-space: nowrap;
+          display: flex;
+          justify-content: center;
+          color: aliceblue;
+          font-size: 20px;
+          
+        }
+      
+        table {
+          border-collapse: collapse;
+        }
+      
+        th {
+          cursor: pointer;
+          color: aliceblue;
+        }
+      
+        td.item {
+          padding-inline-start: 2em;
+          text-align: start;
+          white-space: nowrap;
+          color: aliceblue;
+        }
+      
+        a.icon {
+          padding-inline-start: 1.5em;
+          text-decoration: none;
+          user-select: auto;
+          color: aliceblue;
+        }
+      
+        a.icon:hover {
+          text-decoration: underline;
+          color: #3396d7;
+        }
+      
+        a.file {
+          background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABnRSTlMAAAAAAABupgeRAAABEElEQVR42nRRx3HDMBC846AHZ7sP54BmWAyrsP588qnwlhqw/k4v5ZwWxM1hzmGRgV1cYqrRarXoH2w2m6qqiqKIR6cPtzc3xMSML2Te7XZZlnW7Pe/91/dX47WRBHuA9oyGmRknzGDjab1ePzw8bLfb6WRalmW4ip9FDVpYSWZgOp12Oh3nXJ7nxoJSGEciteP9y+fH52q1euv38WosqA6T2gGOT44vry7BEQtJkMAMMpa6JagAMcUfWYa4hkkzAc7fFlSjwqCoOUYAF5RjHZPVCFBOtSBGfgUDji3c3jpibeEMQhIMh8NwshqyRsBJgvF4jMs/YlVR5KhgNpuBLzk0OcUiR3CMhcPaOzsZiAAA/AjmaB3WZIkAAAAASUVORK5CYII=") left top no-repeat;
+        }
+      
+        a.dir {
+          background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABt0lEQVR42oxStZoWQRCs2cXdHTLcHZ6EjAwnQWIkJyQlRt4Cd3d3d1n5d7q7ju1zv/q+mh6taQsk8fn29kPDRo87SDMQcNAUJgIQkBjdAoRKdXjm2mOH0AqS+PlkP8sfp0h93iu/PDji9s2FzSSJVg5ykZqWgfGRr9rAAAQiDFoB1OfyESZEB7iAI0lHwLREQBcQQKqo8p+gNUCguwCNAAUQAcFOb0NNGjT+BbUC2YsHZpWLhC6/m0chqIoM1LKbQIIBwlTQE1xAo9QDGDPYf6rkTpPc92gCUYVJAZjhyZltJ95f3zuvLYRGWWCUNkDL2333McBh4kaLlxg+aTmyL7c2xTjkN4Bt7oE3DBP/3SRz65R/bkmBRPGzcRNHYuzMjaj+fdnaFoJUEdTSXfaHbe7XNnMPyqryPcmfY+zURaAB7SHk9cXSH4fQ5rojgCAVIuqCNWgRhLYLhJB4k3iZfIPtnQiCpjAzeBIRXMA6emAqoEbQSoDdGxFUrxS1AYcpaNbBgyQBGJEOnYOeENKR/iAd1npusI4C75/c3539+nbUjOgZV5CkAU27df40lH+agUdIuA/EAgDmZnwZlhDc0wAAAABJRU5ErkJggg==") left top no-repeat;
+        }
+      
+        a.up {
+          background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACM0lEQVR42myTA+w1RxRHz+zftmrbdlTbtq04qRGrCmvbDWp9tq3a7tPcub8mj9XZ3eHOGQdJAHw77/LbZuvnWy+c/CIAd+91CMf3bo+bgcBiBAGIZKXb19/zodsAkFT+3px+ssYfyHTQW5tr05dCOf3xN49KaVX9+2zy1dX4XMk+5JflN5MBPL30oVsvnvEyp+18Nt3ZAErQMSFOfelCFvw0HcUloDayljZkX+MmamTAMTe+d+ltZ+1wEaRAX/MAnkJdcujzZyErIiVSzCEvIiq4O83AG7LAkwsfIgAnbncag82jfPPdd9RQyhPkpNJvKJWQBKlYFmQA315n4YPNjwMAZYy0TgAweedLmLzTJSTLIxkWDaVCVfAbbiKjytgmm+EGpMBYW0WwwbZ7lL8anox/UxekaOW544HO0ANAshxuORT/RG5YSrjlwZ3lM955tlQqbtVMlWIhjwzkAVFB8Q9EAAA3AFJ+DR3DO/Pnd3NPi7H117rAzWjpEs8vfIqsGZpaweOfEAAFJKuM0v6kf2iC5pZ9+fmLSZfWBVaKfLLNOXj6lYY0V2lfyVCIsVzmcRV9Y0fx02eTaEwhl2PDrXcjFdYRAohQmS8QEFLCLKGYA0AeEakhCCFDXqxsE0AQACgAQp5w96o0lAXuNASeDKWIvADiHwigfBINpWKtAXJvCEKWgSJNbRvxf4SmrnKDpvZavePu1K/zu/due1X/6Nj90MBd/J2Cic7WjBp/jUdIuA8AUtd65M+PzXIAAAAASUVORK5CYII=") left top no-repeat;
+        }
+      
+        html[dir=rtl] a {
+          background-position-x: right;
+        }
+
+
+        /*barra de pesquisa*/
+       div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+       } 
+       /*barra color*/
+        .input-group{
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          justify-items: center;
+          align-items: center;
+          background: transparent;
+          backdrop-filter: blur(5px);
+          border: 1px solid #3396d7;
+          padding: 8px 16px 8px 8px;
+          border-radius: 24px;
+          gap: 8px;
+          margin-top: 16px;
+        }/*barra color*/
+
+        
+
+        .input-field{
+          width: 100%;
+          border: none;
+          background: transparent;
+        }
+        .input-field:focus{
+          outline: none;
+          background: transparent;
+        }
+        .input-icon{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100%;
+          min-width: 32px;
+          min-height: 32px;
+          background-color: #3396d7;
+          color: #ffffff;
+        }
+
+       #placeholder{
+        color: #ffffff;
+       }
+
+
+      </style>
+
+            <h1 id="title">Matricula</h1>
+            <body>
+              
+            <!--Barra de pesquisa-->
+              <div id="container">
+                <div class="input-group">
+                  <div class="input-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+
+                  <input 
+                  id="search" 
+                  type="text" 
+                  class="input-field" 
+                  placeholder="Buscar Arquivos"
+                  >
+                </div>
+              </div>
+              <!--Barra de pesquisa-->
+
+            <!--Div de locação de arquivo Appweb -->
+            <table>
+                <thead id="theader">
+                    <tr>
+                        <th id="nameColumnHeader" data-order="1">Name</th>
+                        <th id="sizeColumnHeader" data-order="1">matricula</th>
+                        <th id="dateColumnHeader" data-order="1">CPF</th>
+                        <th id="actionColumnHeader" data-order="1">Admição</th>
+                        <th id="dirColumnHeader" data-order="1">Tempo de Casa</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="ditem">
+                    <!-- Div de locação de arquivo Appweb -->
+                     
+                    
+                    <tr>
+                        <td class="item">Alisson</a>
+                        </td>
+                        <td class="item">39633</td>
+                        <td class="item">502.510.358-40</td>
+                        <td class="item">27/01/2022</td>
+                        <td class="item">2 anos e 9 mês</td>
+                </tbody>
+            </table>
+            <div id="parentDirLinkBox" style="display: none;">
+                <a id="parentDirLink" href="#" class="up">Parent Directory</a>
+            </div>
+            <!--Diretorios de arquivos-->
+
+            
+            <!--Script da barra de pesquisa-->
+              <script src="src/script.js"></script>
+        </body>
+
+</html>
