@@ -1,10 +1,12 @@
+/*Todos os direitos voltados para Alisson Hiosaki*/
+
 /*mobile*/
-@media (max-width: 1000px){
+@media (max-width: 800px){
     body{
         background: url(./image/mobile\ login.png);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 97.5dvh;
+        height: 98vh;
         background-position: center center;
     }
     
