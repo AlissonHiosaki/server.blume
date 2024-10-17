@@ -4,17 +4,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --white: #fff;
-    --dark: #000;
+/*direitos autorais*/
+.direitos-autorais{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-block-start: 200px;
 }
-body{
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-background-position: center;
+a{
+    text-decoration: none;
+    color: #3396d7;
+    font-size: 20px;
+    border: 1px solid #3396d7;
+    padding: 2px;
+    border-radius: 10px;
 }
+a:hover{
+    background-color: #3396d7;
+    color: white;
+}
+/*direitos autorais*/
+
 .container{
     display: flex;
     justify-content: center;

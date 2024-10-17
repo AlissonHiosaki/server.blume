@@ -1,0 +1,11 @@
+/*mobile*/
+@media (max-width: 1000px){
+    body{
+        background: url(./image/mobile\ login.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 93vh;
+        background-position: center center;
+    }
+    
+}

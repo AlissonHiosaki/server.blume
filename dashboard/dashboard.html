@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
    <!--estilo da pagina-->
    <link rel="stylesheet" href="../assets/css/home.css">
    
@@ -15,25 +17,24 @@
   
     </style>
     
-    <title>Excel</title>
+    <title>AppDashboard</title>
     </head>
 <body>
-  
- 
+         
   <nav class="menu-lateral">
     
     <div class="btn-expandir">
       <i class="bi bi-list" id="btn-exp"></i>
     </div><!--btn-expandir-->
     <ul>
-      <li class="item-menu">
+      <li class="item-menu ">
         <a href="../home/home.html">
           <span class="icon"><i class="bi bi-house-door"></i></span>
           <icon class="txt-link">Home</span>
         </a>
       </li>
-            <li class="item-menu">
-        <a href="#">
+            <li class="item-menu ativo">
+        <a href="../dashboard/dashboard.html">
           <span class="icon"><i class="bi bi-columns-gap"></i></span>
           <icon class="txt-link">Dashboard</span>
         </a>
@@ -44,8 +45,8 @@
           <icon class="txt-link">PowerBi</span>
         </a>
       </li>
-      <li class="item-menu ativo">
-        <a href="./excel.html">
+      <li class="item-menu">
+        <a href="../excel/excel.html">
           <span class="icon"><i class="bi bi-file-earmark-spreadsheet"></i></span>
           <icon class="txt-link">Excel</span>
         </a>
@@ -55,6 +56,7 @@
           <span class="icon"><i class="bi bi-pc-display"></i></span>
           <icon class="txt-link">AppWeb</span>
         </a>
+      </li>
       </li>
       <li class="item-menu">
         <a href="https://github.com/AlissonHiosaki/server.blume" target="_black">
@@ -70,17 +72,17 @@
       </li>
     </ul>
   </nav><!--menu-lateral-->
-  
-  
-  <iframe 
-  width="100%"
-   height="900px" 
-   frameborder="0" 
-   scrolling="no" 
-   src="https://hiosaki-my.sharepoint.com/personal/alisson_hiosaki_intranet-blume_com/_layouts/15/Doc.aspx?sourcedoc={add6fe8c-13dc-4906-9461-f563bdda9db4}&action=embedview&AllowTyping=True&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True">
-</iframe>
 
-<script src="../assets/js/menu.js"></script>
+<!--App-Dashboard-->
+  <iframe
+  width="93%"
+  height="820px"
+  src="iframe.html" 
+  frameborder="0">
+</iframe>
+<!--App-Dashboard-->
+
+  <script src="../assets/js/menu.js"></script>
 
   </body>
 </html>
