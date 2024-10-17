@@ -1,5 +1,7 @@
+/*todos os direitos voltados para Alisson Hiosaki*/
+
 /*mobile*/
-@media (max-width: 1000px){
+@media (max-width: 2000px){
     
     *{
         font-family: sans-serif;
@@ -28,12 +30,12 @@ a:hover{
     color: white;
 }
     /*direitos autorais*/
+    
     .container{
         display: flex;
         justify-content: center;
         width: 100%;
         margin-top: 100px;
-       
     }
     
     .card{
@@ -46,10 +48,12 @@ a:hover{
         height: 100%dvh;
     }
     .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 30px;
-        margin-block: 40px;
         margin-top: -110px;
-        color: rgb(255, 255, 255);
+        color: white;
     }
     .logo{
         display: flex;
@@ -172,3 +176,5 @@ a:hover{
     
     
 }
+
+/*copyright Alisson Hiosaki 2024*/
