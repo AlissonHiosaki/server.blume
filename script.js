@@ -4,8 +4,8 @@
      var senha = document.getElementById('senha').value;
 
      if(login == "admin" && senha == "admin"){
-          alert('Sucesso');
-          location.href = "/home/home.html";
+          alert('Login Efetuado');
+          location.href = "./home/home.html";
      }else{
           alert('Usuario ou senha incorreta')
      }
