@@ -11,20 +11,16 @@
 
     <!--estilo de pagina mobile-->
     <link rel="stylesheet" href="/mobile/login-mobile.css">
-    
-    <!--estilo de plano de fundo mobile-->
     <link rel="stylesheet" href="./img css/wallpaper -login.css">
-    <!--titulo da pagina-->
     <title>Blume | Server</title>
     
-    <!--codigo do main da pagina index-->
+
 </head>
 <body>
      <img class="logo" src="#" alt=""
      width="150" height="">
          <div class="container">
-           
-            <!--formulario de login-->
+            
             <div class="card">
                 <h1 class="title">Entre com sua conta</h1> 
                 <form action="">
@@ -32,14 +28,14 @@
                 <img class="user"src="https://raw.githubusercontent.com/app-htn/appvendas/refs/heads/main/logo/profile.png"
           alt="profile" width="99" height="99">
                 <div class="label-float">
-                    <input type="text" id="usuario" placeholder="Usuário"> 
+                    <input type="text" id="login" placeholder="Usuário"> 
             </div>
                 <div class="label-pass">
                     <input type="password" id="senha" placeholder="Senha" >
                     <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                 </div>
                 <div class="justify-center">
-                    <button input type="submit" onclick="logar()">Entrar</button>
+                    <button type="submit" onclick="logar(); return false">Entrar</button>
                 </div>
             </div>
          </div>
@@ -51,7 +47,19 @@
         </form>
 
         <!--phpMySQL-->
-        <script src="base de dados/phpMyAdmin.js"></script>
-        <!--phpMySQL-->
+        <script src="script.js"></script>
+        <!--phpMySQL--> 
+
+        <!--função de mostra password-->
+        <script>
+           function mostrarSenha() {
+              var password = document.getElementById('senha');
+              if (password.type === "password") {
+              password.type = "text";
+                } else {
+               password.type = "password";
+             }
+           }
+        </script>
         </body>
 </html>
