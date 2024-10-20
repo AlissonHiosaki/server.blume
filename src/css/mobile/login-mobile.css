@@ -178,9 +178,9 @@
     body{
         background: url(../../../lib/image/Mobile.png);
         background-repeat: no-repeat;
-        background-size: 140%;
-      height: 100%;
-      background-position: center center;
+        background-size: 115%;
+        height: 100%;
+        background-position: center center;
     }
     
 }
