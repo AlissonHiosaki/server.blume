@@ -81,6 +81,7 @@
         min-width: 10px;
         font-size: 16px;
         transition: all .3s ease-out;
+        color: white;
     }
 
     /*btn mostrar senha*/
@@ -103,6 +104,7 @@
         min-width: 10px;
         font-size: 16px;
         transition: all .3s ease-out;
+        color: white;
     }
     /*placeholder text usuario e senha*/
     ::placeholder{
