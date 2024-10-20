@@ -5,7 +5,7 @@
      var senha = document.getElementById('senha').value;
 
      if(login == "admin" && senha == "admin"){
-          location.href = "/home/home.html";
+          location.href = "/./home/home.html";
      }else{
           /**Alert personalizado */
           alert('Usuário ou senha incorreta. Tente novamente.');
