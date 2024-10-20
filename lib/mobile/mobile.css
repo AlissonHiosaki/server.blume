@@ -7,67 +7,7 @@ body{
     body {
       width: 100%;
       max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 500px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 600px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 700px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 800px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 900px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
-      background-size: 100% auto;
-      
-    }
-  }
-
-  @media screen and (max-width: 1000px){
-    body {
-      width: 100%;
-      max-width: 1000px;
-      background: url(/./lib/image/Mobile.png);
+      background: url(../../lib/image/Mobile.png);
       background-size: 100% auto;
       
     }
