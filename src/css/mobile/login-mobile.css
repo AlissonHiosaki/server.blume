@@ -69,6 +69,16 @@
         border-radius: 50%;
         backdrop-filter: blur(10px);
     }
+
+    /*btn mostrar senha*/
+    i{
+        font-size: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        color: rgb(245, 245, 245);
+    }/*btn mostrar senha*/
+
     .label-pass input{
         width: 100%;
         padding: 5px 5px;
@@ -84,14 +94,6 @@
         color: white;
     }
 
-    /*btn mostrar senha*/
-    i{
-        font-size: 25px;
-        cursor: pointer;
-        position: absolute;
-        right: 5px;
-        color: rgb(245, 245, 245);
-    }/*btn mostrar senha*/
     .label-float input{
         width: 100%;
         padding: 5px 5px;
@@ -103,8 +105,8 @@
         border-radius: 5px;
         min-width: 10px;
         font-size: 16px;
-        transition: all .3s ease-out;
         color: white;
+        transition: all .3s ease-out;
     }
     /*placeholder text usuario e senha*/
     ::placeholder{
@@ -126,7 +128,7 @@
         margin-bottom: 5%;
     }
     .label-pass label{
-        color: rgb(87, 177, 52);
+        color: rgb(255, 255, 255);
         pointer-events: none;
         position: absolute;
         top: 0;
@@ -136,7 +138,7 @@
     }
     
     .label-float label{
-        color: rgb(87, 177, 52);
+        color: rgb(255, 255, 255);
         pointer-events: none;
         position: absolute;
         top: 0;
@@ -161,6 +163,7 @@
     .justify-center{
         display: flex;
         justify-content: center;
+        color: white;
     }
     
     #msgError{
@@ -178,9 +181,9 @@
     body{
         background: url(../../../lib/image/Mobile.png);
         background-repeat: no-repeat;
-        background-size: 115%;
-        height: 100%;
-        background-position: center center;
+       background-size: 115%;
+      height: 100%;
+      background-position: center center;
     }
     
 }
