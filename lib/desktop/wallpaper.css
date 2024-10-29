@@ -8,12 +8,12 @@ body{
 
 /*mobile*/ 
 @media (max-width: 800px){
-    body{
-        background: url(../../lib/image/Mobile.png);
-        background-repeat: no-repeat;
-        background-size: 115%;
-        height: 100%;
-        background-position: center center;
-    }
-    
+  body{
+      background: url(../../lib/image/Mobile.png);
+      background-repeat: no-repeat;
+      background-size: 140%;
+      height: 100%;
+      background-position: center center;
+  }
+  
 }
