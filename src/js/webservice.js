@@ -6,8 +6,8 @@ function logar() {
      // Simulação de usuários válidos (aqui você pode conectar a uma API ou banco de dados)
      const usuariosValidos = {
          admin: 'admin',
-         alisson.hiosaki: 'al1ss0n2001@',
-         alisson.hiosaki: 'admin', 
+         alissonhiosaki: 'al1ss0n2001@',
+         alissonhiosaki: 'admin', 
 
 
 // Exemplo de credenciais
