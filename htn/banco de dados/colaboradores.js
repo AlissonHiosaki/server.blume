@@ -11,7 +11,7 @@
             dataAdmissao:'29/01/2024',
         },
         {
-            foto: 'assets/photos/alisson.jpeg',
+            foto: 'https://raw.githubusercontent.com/AlissonHiosaki/server.blume/refs/heads/main/htn/fotos colaboradores/alisson.jpeg',
             categoria: ['vm', 'lideres'],
             status: 'ATIVO',
             nome: 'ALISSON HIOSAKI ',
@@ -21,7 +21,7 @@
             dataAdmissao:'26/01/2022 ',
         },
         {
-            foto: 'assets/photos/profile.png',
+            foto: 'https://raw.githubusercontent.com/AlissonHiosaki/server.blume/refs/heads/main/htn/fotos colaboradores/profile.png',
             categoria: ['idc'],
             status: 'AFASTADA',
             nome: 'APARECIDA CARIOCA ',
@@ -41,7 +41,7 @@
             dataAdmissao:'26/11/2014 ',
         },
         {
-            foto: 'assets/photos/profile.png',
+            foto: 'https://raw.githubusercontent.com/AlissonHiosaki/server.blume/refs/heads/main/htn/fotos colaboradores/profile.png',
             categoria: ['idc'],
             status: 'ATIVO',
             nome: 'CRISTIANE BENTO',
@@ -51,7 +51,7 @@
             dataAdmissao:'05/11/2024',
         },
         {
-            foto: 'assets/photos/profile.png',
+            foto: 'https://raw.githubusercontent.com/AlissonHiosaki/server.blume/refs/heads/main/htn/fotos colaboradores/profile.png',
             categoria: ['vendas'],
             status: 'ATIVO',
             nome: 'EDUARDA GUIMARAES',
