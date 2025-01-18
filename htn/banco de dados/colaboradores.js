@@ -11,7 +11,7 @@
             dataAdmissao:'29/01/2024',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/alisson.jpeg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/alisson.jpg',
             categoria: ['vm', 'lideres'],
             status: 'ATIVO',
             nome: 'ALISSON HIOSAKI ',
@@ -121,7 +121,7 @@
             dataAdmissao:'10/09/2024',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/jessica.jpeg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/jessica.jpg',
             categoria: ['idc','lideres'],
             status: 'AFASTADA',
             nome: 'JESSICA THOMAZ',
@@ -181,7 +181,7 @@
             dataAdmissao:'06/12/2023',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/matheus.jpeg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/matheus.jpg',
             categoria: ['gestores'],
             status: 'ATIVO',
             nome: ' MATHEUS DO NASCIMENTO',
@@ -241,7 +241,7 @@
             dataAdmissao:'12/05/2017',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/victor.jpeg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/victor.jpg',
             categoria: ['estoque','lideres'],
             status: 'FERIAS',
             nome: 'VICTOR SILVA',
