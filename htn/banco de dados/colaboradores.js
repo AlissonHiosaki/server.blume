@@ -1,7 +1,7 @@
     // exibição de xml ou js na webpage
     const colaboradores = [
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Aline.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/aline.jpg',
             categoria: ['idc'],
             status: 'ATIVO',
             nome: 'ALINE COELHO',
@@ -61,7 +61,7 @@
             dataAdmissao:'05/09/2024',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Elis.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/elis.jpg',
             categoria: ['vendas'],
             status: 'ATIVO',
             nome: 'ELIS PAULA',
@@ -71,7 +71,7 @@
             dataAdmissao:'29/05/2023',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Ester.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/ester.jpg',
             categoria: ['vendas'],
             status: 'ATIVO',
             nome: 'ESTER LIMA',
@@ -81,7 +81,7 @@
             dataAdmissao:'05/12/2023',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Gabriel.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/gabriel.jpg',
             categoria: ['idc'],
             status: 'ATIVO',
             nome: 'GABRIEL SIPRAKI',
@@ -171,7 +171,7 @@
             dataAdmissao:'20/08/2024',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Maira.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/maira.jpg',
             categoria: ['estoque'],
             status: 'ATIVO',
             nome: 'MAIRA ANDRADE',
@@ -191,7 +191,7 @@
             dataAdmissao:'23/11/2020',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Mirela.png',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/mirela.png',
             categoria: ['idc'],
             status: 'ATIVO',
             nome: 'MIRELA FERREIRA',
@@ -211,7 +211,7 @@
             dataAdmissao:'24/01/2024',
         },
         {
-            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/Rhyan.jpg',
+            foto: 'https://alissonhiosaki.github.io/server.blume/htn/fotos colaboradores/rhyan.jpg',
             categoria: ['vendas'],
             status: 'FERIAS',
             nome: 'RHYAN LEMOS',
